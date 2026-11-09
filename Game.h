@@ -1,5 +1,13 @@
 // Includes 
 #pragma once
+#include <string>
+
+enum GameResult
+{
+	WIN = 0,
+	DRAW = 1,
+	LOSS = 2
+};
 
 class Game
 {
@@ -11,6 +19,8 @@ protected:
 	virtual void GameLoop() = 0;
 	virtual void SetupGame() = 0;
 	virtual void CleanupGame() = 0;
+
+	const std::string FormatStringToLowerCase(std::string aString) const;
 
 public:
 	// Construction :
