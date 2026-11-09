@@ -59,17 +59,19 @@ void RockPaperScissors::GameLoop()
 	std::cout << "\nPlease Choose 'Rock', 'Paper', 'Scissors', 'Spock', or 'Lizard' :" << std::endl;
 	std::string Input;
 	std::getline(std::cin, Input);
+	Input = FormatStringToLowerCase(Input);
 
-	while (ActionMap.find(FormatStringToLowerCase(Input)) == ActionMap.end())
+	while (ActionMap.find(Input) == ActionMap.end() && Input != "exit")
 	{
 		Input.clear();
 		std::cout << "Please make sure you enter either 'Rock', 'Paper', 'Scissors', 'Spock', or 'Lizard' to play the game" << std::endl;
 		std::cout << "or you can enter 'exit' to escape the game" << std::endl;
 		std::getline(std::cin, Input);
+		Input = FormatStringToLowerCase(Input);
 	}
 
 	// Exit : 
-	if (FormatStringToLowerCase(Input) == "exit")
+	if (Input == "exit")
 	{
 		EscapeGame();
 		return;
@@ -92,12 +94,14 @@ void RockPaperScissors::GameLoop()
 	Input.clear();
 	std::cout << "\nContinue ?" << " y or n" << std::endl;
 	std::getline(std::cin, Input);
-	while (FormatStringToLowerCase(Input) != "y" && FormatStringToLowerCase(Input) != "n")
+	Input = FormatStringToLowerCase(Input);
+	while (Input != "y" && Input != "n")
 	{
 		Input.clear();
 		std::cout << "Please make sure to enter either y to continue or n to stop." << std::endl;
 		std::cout << "Continue ?" << " y or n" << std::endl;
 		std::getline(std::cin, Input);
+		Input = FormatStringToLowerCase(Input);
 	}
 
 	// Exit : 

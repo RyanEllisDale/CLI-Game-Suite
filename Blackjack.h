@@ -11,8 +11,7 @@ enum BlackJackResult
 	DEALERBUST = 3
 };
 
-
-class Blackjack : public Game
+class Blackjack final : public Game
 {
 private:
 	// Member Data :
