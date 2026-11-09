@@ -4,19 +4,6 @@
 #include <string>
 #include <map>
 
-
-void RockPaperScissors::StartGame()
-{
-	SetupGame();
-
-	while (Running == true)
-	{
-		GameLoop();
-	}
-
-	CleanupGame();
-}
-
 void RockPaperScissors::PrintResults()
 {
 	const std::string ResultStrings[3] = { "Win", "Draw", "Loss" };

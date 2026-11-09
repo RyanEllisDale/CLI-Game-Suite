@@ -11,3 +11,15 @@ const std::string Game::FormatStringToLowerCase(std::string aString) const
 
     return aString;
 }
+
+void Game::StartGame()
+{
+	SetupGame();
+
+	while (Running == true)
+	{
+		GameLoop();
+	}
+
+	CleanupGame();
+}

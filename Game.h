@@ -32,6 +32,6 @@ public:
 	~Game() {};
 
 	// Member Methods - Public : 
-	virtual void StartGame() = 0;
+	void StartGame();
 };
 

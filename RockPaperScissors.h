@@ -44,13 +44,12 @@ struct RockPaperScissorsResult
 class RockPaperScissors final : public Game
 {
 private:
+	// Member Data:
+	std::vector<RockPaperScissorsResult> History;
+
 	// Member Methods - Private :
 	void PrintResults();
 	const GameResult CalculateResult(const RockPaperScissorsAction& aAction1, const RockPaperScissorsAction& aAction2) const;
-
-private:
-	// Member Data:
-	std::vector<RockPaperScissorsResult> History;
 
 protected:
 	// Member Methods - Protected : 
@@ -63,8 +62,5 @@ public:
 	// Construction :
 	RockPaperScissors() {};
 	~RockPaperScissors() {};
-
-	// Member Methods - Public :
-	void StartGame() override final;
 };
 
