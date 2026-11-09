@@ -16,10 +16,14 @@ private:
 	// Member Data : 
 	std::vector<GameResult> History;
 	TileState Board[9];
+	bool PlayersTurn = true;
 	
 	// Member Methods - Private :
 	void PrintResults();
 	void PrintBoard();
+
+	bool CheckWin(bool Player = true) const;
+	bool CheckDraw() const;
 
 protected:
 	// Member Methods - Protected : 
