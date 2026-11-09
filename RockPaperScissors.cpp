@@ -69,7 +69,7 @@ void RockPaperScissors::GameLoop()
 	}
 
 	// Exit : 
-	if (Input == "exit")
+	if (FormatStringToLowerCase(Input) == "exit")
 	{
 		EscapeGame();
 		return;

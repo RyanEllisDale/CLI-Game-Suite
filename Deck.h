@@ -19,16 +19,23 @@ enum CardFace
 	JACK = 4
 };
 
-struct Card
+class Card
 {
+public:
 	// Member Data :
 	CardFace Face = CardFace::NUMBER;
 	CardSuit Suit = CardSuit::DIAMONDS;
-	int value = 0;
+	int Value = 0;
+	bool Shown = false;
 
 	// Construction :
 	Card(void) = default;
-	Card(const CardFace& Face, const CardSuit& Suit, int value) : Face(Face), Suit(Suit), value(value) {}
+	Card(const CardFace& aFace, const CardSuit& aSuit, 
+		int aValue, bool aShown) : Face(aFace), Suit(aSuit), 
+		Value(aValue), Shown(aShown) {}
+
+	// Member Functions - Public : 
+	void PrintOneline(void) const;
 };
 
 class Deck
