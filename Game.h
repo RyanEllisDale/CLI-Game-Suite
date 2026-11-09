@@ -2,6 +2,9 @@
 #pragma once
 #include <string>
 
+// Macros
+#define LINE_BREAK "-------------"
+
 enum GameResult
 {
 	WIN = 0,
@@ -19,6 +22,7 @@ protected:
 	virtual void GameLoop() = 0;
 	virtual void SetupGame() = 0;
 	virtual void CleanupGame() = 0;
+	virtual void EscapeGame() = 0;
 
 	const std::string FormatStringToLowerCase(std::string aString) const;
 
