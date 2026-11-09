@@ -5,6 +5,7 @@ class Game
 {
 protected:
 	// Member Methods : 
+	virtual void StartGame() = 0;
 	virtual void GameLoop() = 0;
 	virtual void SetupGame() = 0;
 	virtual void CleanupGame() = 0;
